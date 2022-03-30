@@ -1,0 +1,30 @@
+body {
+    background-color: rgb(143, 157, 245);
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    height: 45px;
+    width: 650px;
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 15px;
+}
+
+input {
+    padding: 4px 10px;
+    border: 0;
+    border-radius: 15px;
+    width: 75%;
+    font-size: 1.3em;
+}
+
+.submit {
+    border: medium none;
+    background-image: none;
+    background: transparent;
+    float: left;
+    background-color: transparent;
+    font-size: 1.3em;
+}
