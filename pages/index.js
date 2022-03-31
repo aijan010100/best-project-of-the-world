@@ -1,7 +1,20 @@
 import Head from 'next/head'
+import { Map } from '../components/Map'
+import { useJsApiLoader } from '@react-google-maps/api'
+
 const API_KEY = process.env.NEXT_PUBLIC_API_KEY
 
+const defaultCenter = {
+    lat: -3.745,
+    lng: -38.523,
+}
+
 export default function Home() {
+    const { isLoaded } = useJsApiLoader({
+        id: 'google-map-script',
+        googleMapsApiKey: API_KEY,
+    })
+
     return (
         <>
             <Head>
@@ -34,6 +47,13 @@ export default function Home() {
                             <i className="fas fa-search"></i>
                         </button>
                     </form>
+                </div>
+                <div className="ourMap">
+                    {isLoaded ? (
+                        <Map center={defaultCenter} />
+                    ) : (
+                        <h2>Loading</h2>
+                    )}
                 </div>
             </main>
         </>
