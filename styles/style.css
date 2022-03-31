@@ -1,4 +1,5 @@
 body {
+    margin: 0%;
     background-color: rgb(143, 157, 245);
 }
 
@@ -9,6 +10,7 @@ form {
     width: 650px;
     margin: auto;
     margin-top: 10px;
+    margin-bottom: 10px;
     border-radius: 15px;
 }
 
@@ -27,4 +29,10 @@ input {
     float: left;
     background-color: transparent;
     font-size: 1.3em;
+}
+
+#search {
+    position: fixed;
+    z-index: 999;
+    width: 100%;
 }

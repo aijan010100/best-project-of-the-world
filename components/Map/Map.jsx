@@ -7,6 +7,20 @@ const containerStyle = {
     height: '100%',
 }
 
+const defaultOptions = {
+    panControl: true,
+    zoomControl: true,
+    mapTypeControl: false,
+    scaleControl: false,
+    streetViewControl: false,
+    rotateControl: false,
+    clickableIcons: false,
+    keyboardShortcuts: false,
+    scrollwheel: false,
+    disableDoubleClickZoom: false,
+    fullscreenControl: false,
+}
+
 const Map = ({ center }) => {
     const mapRef = React.useRef(undefined)
 
@@ -26,6 +40,7 @@ const Map = ({ center }) => {
                 zoom={10}
                 onLoad={onLoad}
                 onUnmount={onUnmount}
+                options={defaultOptions}
             >
                 {/* Child components, such as markers, info windows, etc. */}
                 <></>
