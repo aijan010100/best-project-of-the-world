@@ -1,6 +1,5 @@
 body {
     margin: 0%;
-    background-color: rgb(143, 157, 245);
 }
 
 form {
@@ -27,12 +26,20 @@ input {
     background-image: none;
     background: transparent;
     float: left;
-    background-color: transparent;
+    background-color: rgb(121, 188, 250);
     font-size: 1.3em;
+    border: 0;
+    border-radius: 15px;
 }
 
-#search {
+.search {
     position: fixed;
     z-index: 999;
     width: 100%;
+}
+.fas {
+    position: relative;
+    top: 17px;
+    left: 470px;
+    color: gray;
 }

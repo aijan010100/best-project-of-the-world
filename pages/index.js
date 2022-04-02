@@ -1,6 +1,8 @@
 import Head from 'next/head'
 import { Map } from '../components/Map'
 import { useJsApiLoader } from '@react-google-maps/api'
+// import { Navbar } from '../components/NavBar'
+// import { HamburgerMenuPage } from '../components/Navbar2'
 
 const API_KEY = process.env.NEXT_PUBLIC_API_KEY
 
@@ -29,10 +31,12 @@ export default function Home() {
                 <meta name="keywords" content="next, javascript, js, react" />
             </Head>
             <main>
-                <header id="search">
+                <header className="search">
+                    {/* <HamburgerMenuPage /> */}
                     <form id="search-form" action="" method="get">
+                        <i className="fas fa-search"></i>
                         <input
-                            className="search"
+                            className="search-input"
                             id="search-input"
                             name="s"
                             placeholder="Choose your way..."
@@ -47,10 +51,11 @@ export default function Home() {
                             id="search-button"
                             type="submit"
                         >
-                            <i className="fas fa-search"></i>
+                            search
                         </button>
                     </form>
                 </header>
+
                 <div className="ourMap">
                     {isLoaded ? (
                         <Map center={defaultCenter} />
