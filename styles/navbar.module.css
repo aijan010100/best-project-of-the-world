@@ -1,81 +1,51 @@
-.menu-btn {
+.nav {
+    height: 50px;
+    width: 100%;
+    background-color: white;
+    position: fixed;
+    z-index: 50;
     display: flex;
     align-items: center;
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 26px;
-    height: 26px;
-    cursor: pointer;
-    z-index: 999;
 }
-.menubtn > span,
-.menubtn > span::before,
-.menubtn > span::after {
-    display: block;
-    position: absolute;
+
+.main {
+    padding: 50px;
+}
+
+.main p {
+    margin-top: 20px;
+}
+
+.burgerbtn {
     width: 20px;
+    height: 20px;
+    margin-left: 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+.burgerbtn:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 30px;
+    background-color: black;
     height: 2px;
-    left: 10px;
-    background-color: #616161;
-    transition-duration: 0.25s;
 }
 
-.menubtn > span::before {
+.burgerbtn span {
+    position: absolute;
+    top: 9px;
+    width: 30px;
+    background-color: black;
+    height: 2px;
+}
+
+.burgerbtn:after {
     content: '';
-    top: 8px;
-}
-.menubtn > span::after {
-    content: '';
-    top: -8px;
-}
-
-.menubox {
-    display: block;
-    position: fixed;
-    visibility: hidden;
-    top: 0;
-    left: -100%;
-    width: 300px;
-    height: 100%;
-    margin: 0;
-    padding: 80px 0;
-    list-style: none;
-    background-color: #eceff1;
-    box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
-    transition-duration: 0.25s;
-}
-
-.menuitem {
-    display: block;
-    padding: 12px 24px;
-    color: #333;
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px;
-    font-weight: 600;
-    text-decoration: none;
-    transition-duration: 0.25s;
-}
-.menuitem:hover {
-    background-color: #cfd8dc;
-}
-
-#menutoggle {
-    opacity: 0;
-}
-
-#menutoggle:checked ~ .menubtn > span {
-    transform: rotate(45deg);
-}
-#menutoggle:checked ~ .menubtn > span::before {
-    top: 0;
-    transform: rotate(0);
-}
-#menutoggle:checked ~ .menubtn > span::after {
-    top: 0;
-    transform: rotate(90deg);
-}
-#menutoggle:checked ~ .menubox {
-    visibility: visible;
-    left: 0;
+    position: absolute;
+    bottom: 0;
+    width: 30px;
+    background-color: black;
+    height: 2px;
 }

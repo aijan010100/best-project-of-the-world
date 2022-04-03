@@ -1,41 +1,37 @@
+import { useState } from 'react'
+import { Menu } from '../Menu'
 import navbarCss from '../../styles/navbar.module.css'
 
 function Navbar() {
+    const [menuActive, setMenuActive] = useState(false)
+    const items = [
+        { value: 'Главная', href: '/' },
+        { value: 'О нас', href: '/about' },
+    ]
     return (
-        <nav className={navbarCss.menubtn}>
-            <input id={navbarCss.menutoggle} type="checkbox" />
-            <label className={navbarCss.menubtn} htmlFor={navbarCss.menutoggle}>
-                <span></span>
-            </label>
-
-            <ul className={navbarCss.menubox}>
-                <li>
-                    <a className={navbarCss.menuitem} href="#">
-                        Home
-                    </a>
-                </li>
-                <li>
-                    <a className={navbarCss.menuitem} href="#">
-                        About us
-                    </a>
-                </li>
-                <li>
-                    <a className={navbarCss.menuitem} href="#">
-                        Blog
-                    </a>
-                </li>
-                <li>
-                    <a className={navbarCss.menuitem} href="#">
-                        Articles
-                    </a>
-                </li>
-                <li>
-                    <a className={navbarCss.menuitem} href="#">
-                        Contacts
-                    </a>
-                </li>
-            </ul>
-        </nav>
+        <div className={navbarCss.app}>
+            <nav className={navbarCss.nav}>
+                <div
+                    className={navbarCss.burgerbtn}
+                    onClick={() => setMenuActive(!menuActive)}
+                >
+                    <span />
+                </div>
+            </nav>
+            {/* <main className={navbarCss.main}>
+                <p>verververvdevtrbvervrtvrevfeve</p>
+                <p>verververvdevtrbvervrtvrevfeve</p>
+                <p>verververvdevtrbvervrtvrevfeve</p>
+                <p>verververvdevtrbvervrtvrevfeve</p>
+                <p>verververvdevtrbvervrtvrevfeve</p>
+            </main> */}
+            <Menu
+                active={menuActive}
+                setActive={setMenuActive}
+                header={'Бургер меню'}
+                items={items}
+            />
+        </div>
     )
 }
 

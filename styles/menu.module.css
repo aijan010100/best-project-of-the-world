@@ -1,0 +1,40 @@
+.menu {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 50px;
+    left: 0;
+    transform: translateX(-100%);
+}
+.menu.active {
+    transform: translateX(0);
+}
+
+.menu_content {
+    width: 30%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.menu_header {
+    font-size: 2rem;
+    color: white;
+    padding: 10px;
+    border-bottom: 1px solid white;
+    width: 100%;
+    text-align: center;
+}
+.a {
+    color: white;
+    text-decoration: none;
+}
+
+.menu_content ul {
+    text-align: center;
+}
+.menu_content ul li {
+    margin: 10px;
+    font-size: 1.3rem;
+}
